@@ -7,6 +7,12 @@
     <title>Superhero Index</title>
 </head>
 <body>
-    <h1>This is a templated view!</h1>
+    <h1>List of Superheroes</h1>
+    <ul>
+        {% for superhero in all_superheroes %}
+        <li><h2> {{superhero.superhero_name}} </h2>
+        <a href="{% url 'superheroes:detail' superhero.id %}">See more info</a></li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
