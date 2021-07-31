@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{% url 'superheros:create_new_superhero' %}" method="post">
+    <form action="{% url 'superheroes:create_new_superhero' %}" method="post">
         {% csrf_token %}
         superhero_name:<input type="text" name="superhero_name" id="superhero_name"><br>
         alter_ego:<input type="text" name="alter_ego" id="alter_ego"><br>
