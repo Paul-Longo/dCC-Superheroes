@@ -10,10 +10,10 @@
      <form action="{% url 'superheroes:update_hero' %}" method="post">
         {% csrf_token %}
         update_hero.superhero_name:<input type="text" name="superhero_name" id="superhero_name" value="update_hero.superhero_name"><br>
-        alter_ego:<input type="text" name="alter_ego" id="alter_ego" value="update_hero.alter_ego"><br>
-        primary_super_power:<input type="text" name="primary_super_power" id="primary_super_power" value="update_hero.primary_super_power"><br>
-        secondary_super_power:<input type="text" name="secondary_super_power" id="secondary_super_power" value="update_hero.secondary_super_power"><br>
-        catchphrase:<input type="text" name="catchphrase" id="catchphrase" value="update_hero.catchphrase"><br>
+        update_hero.alter_ego:<input type="text" name="alter_ego" id="alter_ego" value="update_hero.alter_ego"><br>
+        update_hero.primary_super_power:<input type="text" name="primary_super_power" id="primary_super_power" value="update_hero.primary_super_power"><br>
+        update_hero.secondary_super_power:<input type="text" name="secondary_super_power" id="secondary_super_power" value="update_hero.secondary_super_power"><br>
+        update_hero.catchphrase:<input type="text" name="catchphrase" id="catchphrase" value="update_hero.catchphrase"><br>
         <input type="submit" value="Update Hero!">
     </form>
 </body>
