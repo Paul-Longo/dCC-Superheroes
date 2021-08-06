@@ -7,6 +7,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('<int:superhero_id>/', views.detail, name='detail'),
     path('new/', views.create, name='create_new_superhero'),
-    path('update/', views.update, name='updated_superhero'),
-    path('delete/', views.delete, name='delete')
+    path('update/<int:superhero_id>/', views.update, name='updated_superhero'),
+    path('delete/<int:superhero_id>/', views.delete, name='delete')
 ]
