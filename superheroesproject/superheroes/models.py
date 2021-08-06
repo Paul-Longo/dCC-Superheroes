@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Superhero(models.Model):
-    superhero_name = models.CharField(max_length=50)
+    superhero_name = models.CharField(max_length=200)
     alter_ego = models.CharField(max_length=50)
     primary_super_power = models.CharField(max_length=100)
     secondary_super_power = models.CharField(max_length=100)
