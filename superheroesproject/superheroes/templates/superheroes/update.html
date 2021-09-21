@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Superhero</title>
+    <title>Superhero Editor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
 <body>
-     <form action="{% url 'superheroes:update_hero' %}" method="post">
+    <h1 class="container-fluid"> Updating {{update_superhero.name}} </h1>
+    <form action="{% url 'superheroes:update_superhero' update_hero.id %}" method="post" class="container">
         {% csrf_token %}
-        update_hero.superhero_name:<input type="text" name="superhero_name" id="superhero_name" value="update_hero.superhero_name"><br>
-        update_hero.alter_ego:<input type="text" name="alter_ego" id="alter_ego" value="update_hero.alter_ego"><br>
-        update_hero.primary_super_power:<input type="text" name="primary_super_power" id="primary_super_power" value="update_hero.primary_super_power"><br>
-        update_hero.secondary_super_power:<input type="text" name="secondary_super_power" id="secondary_super_power" value="update_hero.secondary_super_power"><br>
-        update_hero.catchphrase:<input type="text" name="catchphrase" id="catchphrase" value="update_hero.catchphrase"><br>
-        <input type="submit" value="Update Hero!">
+        <div class="form-floating mb-3">
+            <input type="text" name="name" id="name" class="form-control" value= "{{update_hero.name}}" >
+            <label for="name" class="form-label">Name:</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" name="alter_ego_name" id="alter_ego_name" class="form-control" value= "{{update_superhero.alter_ego_name}}" >
+            <label for="alter_ego_name" class="form-label">Alter Ego:</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" name="primary_super_ability" id="primary_super_ability" class="form-control" value= "{{update_superhero.primary_super_ability}}" >
+            <label for="primary_super_ability" class="form-label">Primary Superpower:</label>
+        </div>
+         <button type="submit" class="btn btn-primary">Update</button>
+        <a href="{% url 'superheroes:index' %}"  class="btn btn-primary">Back</a>
     </form>
-</body>
-</html>
