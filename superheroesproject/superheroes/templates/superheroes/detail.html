@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1 class="container-fluid"> {{single_superhero.name}} </h1>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong> Alter Ego: </strong>  {{single_superhero.alter_ego_name}} </li>
+        <li class="list-group-item"><strong> Primary Super Power: </strong>  {{single_superhero.primary_super_ability}} </li>
+        <li class="list-group-item"><strong> Secondary Super Power: </strong>  {{single_superhero.secondary_super_ability}} </li>
+        <li class="list-group-item"><strong> Catchphrase: </strong>  {{single_superhero.catchphrase}} </li>
+    </ul>
+
+    <div class="container-fluid">
+        <a href="{% url 'superheroes:update_superhero' single_superhero.pk %}" class="btn btn-primary">Edit Superhero</a>
+        <a href="{% url 'superheroes:delete' single_superhero.pk %}" class="btn btn-primary">Delete Superhero</a>
+        <a href="{% url 'superheroes:index' %}" class="btn btn-primary">Select New Hero</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Superhero's Details</title>
 </head>
 <body>
@@ -18,4 +47,4 @@
     <h1>Catch Phrase</h1>
     <h2>{{Superhero.catch_phrase}}</h2>
 </body>
-</html>
+</html> -->
